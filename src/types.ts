@@ -8,11 +8,11 @@ export type Ladder = Readonly<{
   top: number;
 }>;
 
-export type Player = Readonly<{
-  name: string;
-  isComputer: boolean;
+export type Player = {
+  readonly name: string;
+  readonly isComputer: boolean;
   position: number;
-}>;
+};
 
 export type DieRollFn = () => number;
 
