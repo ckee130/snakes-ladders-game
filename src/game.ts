@@ -61,4 +61,17 @@ export class Game {
 
     return { ...result, player };
   }
+
+  playComputerTurn(): TurnResult {
+    if (!this.currentPlayer.isComputer) throw new Error("Current player is not a computer");
+    return this.takeTurn();
+  }
+
+  playComputers(): TurnResult[] {
+    const results: TurnResult[] = [];
+    while (!this.isOver && this.currentPlayer.isComputer) {
+      results.push(this.playComputerTurn());
+    }
+    return results;
+  }
 }
