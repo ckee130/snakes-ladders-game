@@ -9,6 +9,7 @@ A TypeScript library implementing the classic Snakes and Ladders board game logi
 - Turn-order determination via roll-off
 - Exact-landing win condition
 - Dependency-injectable dice for deterministic testing
+- Optional demo UI (does not change library logic)
 
 ## Installation
 
@@ -16,14 +17,19 @@ A TypeScript library implementing the classic Snakes and Ladders board game logi
 npm install
 ```
 
-## Usage
+## Commands
 
 ```bash
-npm run build    # Compile TypeScript
 npm test         # Run tests
-npm run test:watch  # Run tests in watch mode
+npm run test:watch
+npm run build    # Compile library to dist/
+npm run demo     # Open the demo UI
 ```
 
-## API
+## Demo UI
 
-Documentation will be added as features are implemented.
+```bash
+npm run demo
+```
+
+Opens a simple browser UI that imports the library and lets you play against the computer. Game rules still live entirely under `src/`.
